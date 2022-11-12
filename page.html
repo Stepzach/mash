@@ -87,9 +87,10 @@ body, html {
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
           <p></p>
-          <select id="item-options"><option value="Small" price="30">Small</option><option value="Medium" price="30">Medium</option><option value="Large" price="30">Large</option></select>
-          <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
-        </div>
+         <div class="custom-select" style="width:200px;"> <select id="item-options"><option value="Small" price="30">Small</option><option value="Medium" price="30">Medium</option><option value="Large" price="30">Large</option></select>
+         </div>
+         <div class="custom-select" style="width:50px;"> <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+         </div>  </div>
       <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -254,6 +255,68 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 </script>
+     <style>
+     /*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+​
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+​
+.select-selected {
+  background-color: DodgerBlue;
+}
+​
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+​
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+​
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+​
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+​
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+​
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+     </style>
 </body>
 </html>     
               
