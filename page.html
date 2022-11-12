@@ -66,6 +66,21 @@ body, html {
 <!-- Work Section -->
 
     <img src="Correctionfr.png" class="cent" style="Width:85%">
+      
+      
+      
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<img class="mySlides" src="Correctionfr.png" class="cent" style="Width:85%">
+<img class="mySlides" src="Correctionfr.png" class="cent" style="Width:85%">
+<img class="mySlides" src="Correctionfr.png" class="cent" style="Width:85%">
+<img class="mySlides" src="Correctionfr.png" class="cent" style="Width:85%">
+
+<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+
+</div>
+      
 <br><br>
     <div id="smart-button-container">
       <div style="text-align: center;">
@@ -164,6 +179,24 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </body>
 </html>
