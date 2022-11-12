@@ -26,14 +26,17 @@ body, html {
   .leftpad {
   padding-left:6%;
   }
+  .center { 
+    text-align:center;
+  }
 </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
+      <div class="w3-hide-small">
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavba">
-    <a href="#home" class="w3-bar-item w3-button w3-wide w3-hide-large"><img src="Logo black.png" style="height:20vw;"></a>
+  <div class="w3-bar w3-white w3-card" id="myNav">
       <a href="#home" class="w3-bar-item w3-button w3-wide w3-hide-small leftpad"><img src="Logo black.png" style="height:9vw;"></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small rightpad">
@@ -41,22 +44,17 @@ body, html {
         <a href="#pricing" class="w3-bar-item w3-button"><h3><b>Gift Shop</b></h3></a>
       <a href="#info" class="w3-bar-item w3-button"><h3><b>Info</b><h3></a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
 </div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">x</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Latest drop</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Gift Shop</a>
-  <a href="#info" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
-</nav>
-
+  </div>
+  <div class="w3-hide-large">  
+<a href="#home" class="w3-bar-item w3-button w3-wide w3-hide-large"><img src="Logo black.png" style="height:20vw;"></a>
+    <div class="center">
+          <a href="#work" class=" w3-button"><h3><b>Latest drop</b></h3></a>
+        <a href="#pricing" class="w3-button"><h3><b>Gift Shop</b></h3></a>
+      <a href="#info" class=" w3-button"><h3><b>Info</b><h3></a>
+        </div></div>
 
 
 
