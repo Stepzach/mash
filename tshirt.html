@@ -121,20 +121,13 @@ body {
      </div>
       <br>
     
-      <div id="smart-button-container">
+
+                
+          <div id="smart-button-container">
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
           <p></p>
-         <div style="margin-left:0%">
-         <div class="select">
-          <select id="item-options"><option value="0">Choose Size</option><option value="Small" price="25">Small</option><option value="Medium" price="25">Medium</option><option value="Large" price="25">Large</option></select>
-          </div></div>
-    
-        <div id="smart-button-container">
-      <div style="text-align: center;">
-        <div style="margin-bottom: 1.25rem;">
-          <p></p>
-          <select id="item-options"><option value="Size" price="25">Size - 25 GBP</option></select>
+          <select id="item-options"><option value="Small" price="25">Small</option><option value="Medium " price="25">Medium</option><option value="Large" price="25">Large</option></select>
           <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
         </div>
       <div id="paypal-button-container"></div>
@@ -156,9 +149,9 @@ body {
     }
     paypal.Buttons({
       style: {
-        shape: 'pill',
+        shape: 'rect',
         color: 'white',
-        layout: 'horizontal',
+        layout: 'vertical',
         label: 'buynow',
         
       },
@@ -232,7 +225,6 @@ body {
   }
   initPayPalButton();
     </script>
-         
 
 
 <!-- Modal for full size images on click-->
